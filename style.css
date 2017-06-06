@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+html, body { 
+  margin: 0; 
+  padding: 0; 
+  width: 100%; 
+  height: 100%; 
+  cursor: pointer;
+}
+            
+a { 
+  position: absolute;
+  display: block; 
+  width: 100%; 
+  height: 100%; 
+}
+
+/* from here */
+.map {
+  width: 690px;
+  height: 270px;
+  position: relative;
+  top: 130px;
+  margin: auto;
+  left: 0%;
+  z-index: 1; 
+  cursor: pointer;
+  opacity: 0;
+}
+
+#shadow {
+  position: absolute;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1; 
+  width: 690px;
+  height: 270px;
+  display: none;
+  
+}
+
+.map::after {
+    content: '';
+    position: absolute;
+    z-index: 1; 
+    box-shadow: 4px 2px 20px rgba(0, 0, 0, 0.17); 
+    width: 100%; 
+    height: 100%;
+}
+
+#map-light {
+    width: 200px;
+    height: 270px;
+    position: absolute;
+    background-color: #FFD84F;
+    z-index: -1;
+    left: 41.7%;
+    bottom: 0%;
+    display: none;
+}
+
+#room {
+  position: absolute;
+  width: 662.175px;
+  height: 270px;
+  opacity: 1;
+  right: 0px;
+}
+
+.type-wrap {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 105%;
+  font-family: Roboto Mono;
+  font-size: 1rem;
+  letter-spacing: 0.2rem; 
+  color: #666666;
+  text-transform: uppercase;  
+  z-index: 1;
+  opacity: 0;
+}
+
+.type-wrap>span {
+  padding: 0px 0px 0px 0px;
+  line-height: 1.9;
+}
+
+#typed {
+  background-color: #FFD84F;
+  padding: 0px 10px 0px 2px;
+  line-height: 1.9;
+}
+.next {
+    position: absolute;
+    top: 107%;
+    right: 40px;
+    z-index: 4;
+}
+
+#next_arrow {
+    position: absolute;
+    border: solid #FFD84F;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    cursor: pointer;
+    display: inline;
+  
+}
+
+#next_tag {
+  font-family: Roboto;
+  color: #666666;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: absolute;
+  text-align: left;
+  line-height: 12px;
+  background-color: #FFD84F;
+  padding: 3px 1px 2px 15px;
+  width: 120px;
+  z-index: 1;
+  top: 30px;
+  left: -20px;
+  display: none;
+}
+
+#next_tag:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 20px;
+  top: -15px;
+  border: 10px solid;
+  border-color: transparent transparent #FFD84F transparent;
+}
+
+.list {
+  position: absolute;
+  bottom: -350px;
+  left: 11px;
+  font-family: Roboto;
+  font-size: 0.69rem;
+  color: #CECECE;
+  letter-spacing: 0.07rem;
+  line-height: 1.2rem;
+  display: flex;
+}
+
+#col {
+  position: relative;
+  margin: 0 40px 0 0;
+}
+
+.list>div>p {
+  margin: 0 0 20px 0;
+}
+
+#info {
+  font-family: Roboto;
+  font-size: 11px;
+  left: 20%;
+  bottom: 1%;
+  position: absolute;
+  text-align: left;
+  display: none;
+  color: #E6E6E6;
+  letter-spacing: 1px; 
+}
+
+#mail{
+  font-family: Roboto Mono;
+  font-size: 11px;
+  left: 20%;
+  bottom: 17%;
+  position: absolute;
+  background-color: #F2F2F2;
+  color: #808080;
+  display: none;
+  letter-spacing: 1px; 
+}
+
+.contact {
+  position: absolute;
+  font-family: Roboto;
+  font-size: 1rem;
+  letter-spacing: 2px; 
+  color: #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  cursor: pointer;
+  left: 20%;
+  bottom: 20%;
+  display: none;
+  
+}
+
+.contact:hover {
+  border-bottom: 0px;
+}
+
+
+.container {
+  position: absolute;
+  left: 49%;
+  top: 400px;
+  padding-bottom: 80px;
+}
+
+#passingby {
+  font-family: Quattrocento Sans;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 1px; 
+  color: #666666;
+  
+}
+
+.footer {
+  font-family: Roboto Mono;
+  font-size: 0.6rem;
+  position: absolute;
+  color: #E6E6E6;
+  letter-spacing: 1px; 
+  bottom: -460px;
+  left: -0%;
+  text-align: left;
+}
+
+::selection {
+  background: #4D4D4D; /* WebKit/Blink Browsers */
+  color: #FFF;
+}
+::-moz-selection {
+  background: #4D4D4D; /* Gecko Browsers */
+  color: #FFF;
+}
+
+
+@media screen and (max-width : 700px) {
+  .map {
+  width: 100%;
+  top: 55px;
+  right: 10%;    
+  position: relative;
+  }
+  
+  .map::after {
+    content: '';
+    position: absolute;
+    z-index: 1; 
+    box-shadow: 4px 2px 20px rgba(0, 0, 0, 0.0); 
+    width: 100%; 
+    height: 100%;
+  }
+  
+  #shadow {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+  }
+  
+  #room {
+  position: relative;
+  top: 15%;
+  width: 97%;
+  height: 97%;
+  opacity: 1;
+  right: 0.5%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .type-wrap {
+  position: absolute;
+  top: 90%;
+  left: 5px;
+  
+  }
+  .next {
+  top: 80%;
+  left: 15px;
+  }
+   
+  .list {
+  position: relative;
+  top: 180px;
+  left: 30px;
+  font-family: Roboto;
+  font-size: 0.69rem;
+  color: #CECECE;
+  letter-spacing: 0.07rem;
+  line-height: 1.2rem;
+  display: block;
+  z-index: 2;
+}
+
+#col {
+  position: relative;
+  margin: 0 40px 0 0;
+}
+
+.list>div>p {
+  margin: 0 0 20px 0;
+}
+  
+  .footer {
+    position: relative;
+    bottom: -200px;
+    left: -0%;
+    z-index: 2;
+    left: 30px;
+  }  
+  
+  
+  #map-light {
+  position: absolute;
+  background-color: white;
+  z-index: -5; 
+  }
+}
